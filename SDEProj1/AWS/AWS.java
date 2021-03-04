@@ -73,6 +73,7 @@ public class AWS {
 			newArray[i] = newArray[position];
 		}
 		
+	
 		// filling process 
 		// the <= (less or equal) condition sets the length of position
 		// position was first set, then got the size by condition, so whatever was in the position was added to the new size

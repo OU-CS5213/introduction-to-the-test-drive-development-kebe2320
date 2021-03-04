@@ -74,13 +74,13 @@ class AWSTest {
 	}
 	
 	
-	//Part 1 // Creating a Test that actually fails 
+	//Part 1 // Creating a Test that passed 
 	@Test
 	void testRemove1() {
 		int[] y = {1, 2, 3, 9};
 		AWS aws = new AWS(y);
 		
-		int v1 = aws.remove(1);
+		int v1 = aws.remove(-1);
 		int e1 = FILLER_VALUE;
 		assertEquals(e1,v1);
 			

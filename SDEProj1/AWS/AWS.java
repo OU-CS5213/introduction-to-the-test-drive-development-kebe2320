@@ -101,9 +101,9 @@ public class AWS {
 	 */
 	public int removeBiggerThan(int threshold) {
 		
-		int counter = 0;
+		int counter = 0; //starting count
 		
-		for (int i = 0; i < values.length; i++) {
+		for (int i = 0; i < values.length; i++) { 
 			
 			if(values[i] > threshold) {
 				
@@ -112,8 +112,38 @@ public class AWS {
 				counter+=1;	
 			}
 		}
+		//looping through the array while comparing array elements against the threshold
+		//while counting the number of elements that got removed
 		
 		return counter;	
-	}
 		
+	}
+	
+	/*
+	 * Create a method stepMultiplier() in the AWS class that will multiply all values less than 10 by 2, 
+	 * and all values that are less than 20 and bigger than 10 by 4, and 
+	 * all values that are less than 100 and bigger than 20 by 100;
+	 */
+	
+	public void stepMultiplier() {
+		
+		for (int i = 0; i < values.length; i++) {
+			 if(values[i] < 10) {
+				 values[i] = values[i] * 2;
+			 }
+			 
+			 else if (values[i] < 20 && values[i] > 10) {
+				 values[i] = values[i] * 4;
+			 }
+			 
+			 else if (values[i] < 100 && values[i] > 20) {
+				 values[i] = values[i] * 100;
+			 }
+		
+		}
+	}
+	//for loop is for iterating through array elements
+	//for each array element, we test the condition against the numbers given
+	//not returning a value
+	
 }

@@ -144,18 +144,50 @@ class AWSTest {
 	@Test
 	void testRemoveBiggerThan() {
 		
-		int[] arr = {1,2,3,4,7,10,20};
-		int thres = 10;
+		int[] arr = {1,2,3,4,7,10,20}; //declaring an array
+		int thres = 10; //declaring a threshold
 		
-		AWS aws = new AWS(arr);
+		AWS aws = new AWS(arr);  //passing the array into the AWS class
 		
-		int value = aws.removeBiggerThan(thres); //the number of removed values
+		int value = aws.removeBiggerThan(thres); //declaring the number of removed values and calling our method
 		
 		int expected = 1;
 
 		assertEquals(expected, value);
 		
 	}
+	//comparing expected, which is 20 or only one (1) element with what our method gave us
+	
+	@Test
+	void testStepMultiplier() {
+		int[] arr1 = {5, 15, 25}; //declaring a new array
+		AWS aws = new AWS(arr1); //passing the array to the AWS class
+		aws.stepMultiplier(); //calling the method
+		
+		int[] expectedResult = aws.getValues(); //storing values from method to an array
+		
+		//declaring or storing positions
+		int pos0 = 0; 
+		int pos1 = 1;
+		int pos2 = 2;
+		
+		//storing values from our method to variables
+		int awsValues1 = expectedResult[pos0];
+		int awsValues2 = expectedResult[pos1];
+		int awsValues3 = expectedResult[pos2];
+		
+		//calculating expected values of the given array
+		int a = 10;
+		int b = 60;
+		int c = 2500;
+		
+		//comparing values from our method and our hand calculated method
+		assertEquals(a, awsValues1);
+		assertEquals(b, awsValues2);
+		assertEquals(c, awsValues3);
+	
+	}
+	
 	
 
 }

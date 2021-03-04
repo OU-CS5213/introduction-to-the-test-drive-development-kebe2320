@@ -99,7 +99,21 @@ public class AWS {
 	 * remove all values bigger than a threshold that you send and return the number of removed values; 
 	 * use FILLER_VALUE to replace removed values
 	 */
-	
-	
-	
+	public int removeBiggerThan(int threshold) {
+		
+		int counter = 0;
+		
+		for (int i = 0; i < values.length; i++) {
+			
+			if(values[i] > threshold) {
+				
+				values[i] = FILLER_VALUE;
+				
+				counter+=1;	
+			}
+		}
+		
+		return counter;	
+	}
+		
 }

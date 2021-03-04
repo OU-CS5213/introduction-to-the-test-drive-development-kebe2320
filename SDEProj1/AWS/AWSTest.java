@@ -141,5 +141,21 @@ class AWSTest {
 	
 	}
 	
+	@Test
+	void testRemoveBiggerThan() {
+		
+		int[] arr = {1,2,3,4,7,10,20};
+		int thres = 10;
+		
+		AWS aws = new AWS(arr);
+		
+		int value = aws.removeBiggerThan(thres); //the number of removed values
+		
+		int expected = 1;
+
+		assertEquals(expected, value);
+		
+	}
+	
 
 }
